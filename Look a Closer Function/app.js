@@ -263,4 +263,9 @@ const addTax = function(rate){
 
 const addVat = addTax(0.23);
 console.log(addVat(100))
-console.log(addVat(23))
+console.log(addVat(23));
+
+const poll = {
+   question: "What is the best language in the world",
+   option : ["0: javaScript", "1: python", "2: C++", "3: Rust"],
+}
