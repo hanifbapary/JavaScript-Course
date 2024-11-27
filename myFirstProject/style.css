@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html,body{
+   height: 100vh;
+}
+body {
+   font-family: 'Press Start 2P', sans-serif;
+   color: #eee;
+   background-color: #222;
+   /* background-color: #60b347; */
+}
+.body-winnig-color{
+   background-color: #42bf1e;;
+   color: #fff;
+}
+
+.btn{
+   width: 7rem;
+   height: 3rem;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   border-radius: 10px;
+   font-size: 1.2rem;
+}
+/* .btn  .disabled {
+   background-color: grey;
+   color: #ccc;
+   cursor: not-allowed;
+   pointer-events: none; Prevents any click interaction
+} */
+
+header{
+   width: 100%;
+   position: relative;
+   height: 35%;
+   border-bottom: 7px solid #fff;
+   /* overflow: hidden; */
+   /* overflow: hidden; */
+}
+main{
+   width: 100%;
+   height: 60%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   overflow: hidden;
+}
+.again{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+.between{
+   position: absolute;
+   top: 20px;
+   right: 10px;
+   font-size: 0.9rem;
+}
+.heading{
+   width: 100%;
+   position: absolute;
+   bottom:25% ;
+   font-size: 30px;
+   text-align: center;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.number{
+   position:absolute;
+   bottom: -40px;
+   left: 50%;
+   background-color: #fff;
+   width: 100px;
+   height: 80px;
+   color: #222;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 40px;
+   transform: translateX(-50%);
+}
+
+main .left{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   width: 520px;
+}
+.left input{
+   width: 150px;
+   height: 50px;
+   padding: 5px;
+   border: none;
+   outline: none;
+   border-radius: 20px;
+   background-color: #222;
+   border: 4px solid #fff;
+   text-align: center;
+   font-size: 30px;
+   color: #fff;
+}
+
+.right{
+   width: 520px;
+   font-size: 20px;
+}
+.right .message{
+   margin-bottom: 80px;
+}
+.right .label-score{
+   margin-bottom: 20px;
+}
+
+@media screen and (max-width:480px) {
+   header{
+      border-width: 4px;
+   }
+   .btn{
+      width: 90px;
+      height: 30px;
+      font-size: 1rem;
+   }
+   .between{
+      font-size: 10px;
+   }
+   .heading{
+      font-size: 1.3rem;
+      width: 100%;
+   }
+   .number{
+      font-size: 30px;
+      width: 80px;
+      height: 50px;
+      bottom: -28px;
+   }
+   main{
+      flex-direction: column;
+      text-align: center;
+   }
+   .right{
+      font-size: 15px;
+   }
+   .right .message{
+      margin-bottom: 50px;
+   }
+}
