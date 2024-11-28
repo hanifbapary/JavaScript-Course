@@ -277,12 +277,14 @@ console.log(addVat(23));
 // method does 2 things:
 // 1.1. Display a prompt window for the user to input the number of the
 // selected option. The prompt should look like this:
+
 // What is your favourite programming language?
 // 0: JavaScript
 // 1: Python
 // 2: Rust
 // 3: C++
 // (Write option number)
+
 // 1.2. Based on the input number, update the 'answers' array property. For
 // example, if the option is 3, increase the value at position 3 of the array by
 // 1. Make sure to check if the input is a number and if the number makes
@@ -302,34 +304,28 @@ console.log(addVat(23));
 // data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll
 // object! So what should the this keyword look like in this situation?
 
-
 const poll = {
-   question: "What is the best language in the world",
-   option : ["0: javaScript", "1: python", "2: C++", "3: Rust"],
+   question: "Waht is the best language in the world",
+   option: ["0:JavaScript","1: Python", "2: C++", "3: Rust"],
    answer: new Array(4).fill(0),
-
+   // Register new asnwer Method
    registerNewAnswer(){
-      // get the answer
-      const answer = Number(prompt(`${this.question}\n${this.option.join('\n')}
-      \n (Write option number)`));
-
-      // Resiter the answer
-      // console.log(answer)
+      const answer = Number(prompt(`${this.question}\n${this.option.join('\n')}\n(Write option number)`));
+      // Update the answer arry property
       typeof answer === 'number' && answer < this.option.length && this.answer[answer]++;
-      // console.log(this.answer);
+      // console.log(this.answer)
       this.displayResult();
       this.displayResult('string')
    },
-   // display the result
-   displayResult(type = 'array'){
-      if(type === 'array'){
+   displayResult(type = 'none'){
+      if(type === 'none'){
          console.log(this.answer)
       }else if(type === 'string'){
-         console.log(`poll result are ${this.answer.join(', ')}`);
+         console.log(`Poll results are ${this.answer.toString()}`)
       }
    }
 }
-// poll.registerNewAnswer()
-document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll))
 
-poll.displayResult.call({answer: [5,2,3]}, 'string')
+document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+poll.displayResult.call({answer: [5,2,3]});
