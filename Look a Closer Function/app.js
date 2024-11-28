@@ -329,3 +329,21 @@ const poll = {
 document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll));
 
 poll.displayResult.call({answer: [5,2,3]});
+
+
+
+
+// Immediately invoked function Expression;
+
+const runONce = function(){
+   console.log("This will never run again");
+};
+runONce();
+
+(function(){
+   console.log('This will never work again')
+})();
+
+(()=> console.log("This will also never work second time"))();
+
+ 
