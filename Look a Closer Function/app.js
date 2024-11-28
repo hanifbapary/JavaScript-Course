@@ -266,6 +266,7 @@ console.log(addVat(100))
 console.log(addVat(23));
 
 
+
 // Coding Challenge #1
 // Let's build a simple poll app!
 // A poll has a question, an array of options from which people can choose, and an
