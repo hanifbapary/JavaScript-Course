@@ -422,4 +422,3 @@ boardPassengers(230, 5);
    header.style.color = 'blue'
   })
 })();
-
