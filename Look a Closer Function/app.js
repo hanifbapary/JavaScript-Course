@@ -1,4 +1,4 @@
-// 'use strict';
+   // 'use strict';
 const body = document.querySelector('body');
 // body.style.backgroundColor = 'red';
 
@@ -154,6 +154,7 @@ const body = document.querySelector('body');
 
 
 // Return a new fucntion 
+
 // const greet = function(greeting){
 //    return function(name){
 //       console.log(`${greeting} ${name}`)
@@ -184,6 +185,7 @@ const lufhansa = {
    bookings: [],
    book(flightNum , name){
       console.log(`${name} booked a seat on ${this.airline} flight ${this.itaCode}${flightNum}`);
+
       this.bookings.push({flight: `${this.airline} flight ${this.itaCode}${flightNum}`, name})
    }
 }
@@ -236,7 +238,7 @@ const lufhansa = {
 // bookEW23("Layek Miah");
 // bookEW23("Mr. Musaid Mama")
 
-// // UnderStad with event listener
+// UnderStad with event listener
 
 // lufhansa.planes = 300;
 // lufhansa.buyPlane = function(){
