@@ -190,27 +190,27 @@ const lufhansa = {
 // lufhansa.book(301, "Musaid");
 // lufhansa.book(234, "Sorif Uddin");
 
-console.log(lufhansa)
+// console.log(lufhansa)
 
-const eurowings = {
-   airline: "Eurowings",
-   itaCode: "EW",
-   bookings:[]
-};
+// const eurowings = {
+//    airline: "Eurowings",
+//    itaCode: "EW",
+//    bookings:[]
+// };
 
 // Call methods
-const bookFunc = lufhansa.book;
+// const bookFunc = lufhansa.book;
 // bookFunc.call(eurowings, 301, "Sorif uddin");
 // bookFunc.apply(eurowings, [201, "Sara wiliams"]);
 // console.log(eurowings);
 
-bookFunc.call(lufhansa, 201, "Mary Cooper");
+// bookFunc.call(lufhansa, 201, "Mary Cooper");
 
-const swiss = {
-   airline:"Swiss Air Lines",
-   itaCode: "LX",
-   bookings: [],
-}
+// const swiss = {
+//    airline:"Swiss Air Lines",
+//    itaCode: "LX",
+//    bookings: [],
+// }
 // bookFunc.call(swiss, 583, "Mandalina")
 
 // Applay methods;
@@ -226,26 +226,26 @@ const swiss = {
 
 // Bind Methods
 
-const bookEW =  bookFunc.bind(eurowings);
-const bookLH = bookFunc.bind(lufhansa);
-const bookLX = bookFunc.bind(swiss)
+// const bookEW =  bookFunc.bind(eurowings);
+// const bookLH = bookFunc.bind(lufhansa);
+// const bookLX = bookFunc.bind(swiss)
 
-bookEW(23, "Steven Williams");
+// bookEW(23, "Steven Williams");
 
-const bookEW23 = bookFunc.bind(eurowings, 23);
-bookEW23("Layek Miah");
-bookEW23("Mr. Musaid Mama")
+// const bookEW23 = bookFunc.bind(eurowings, 23);
+// bookEW23("Layek Miah");
+// bookEW23("Mr. Musaid Mama")
 
-// UnderStad with event listener
+// // UnderStad with event listener
 
-lufhansa.planes = 300;
-lufhansa.buyPlane = function(){
-   console.log(this);
-   this.planes++;
-   console.log(this.planes)
-}
+// lufhansa.planes = 300;
+// lufhansa.buyPlane = function(){
+//    console.log(this);
+//    this.planes++;
+//    console.log(this.planes)
+// }
 
-document.querySelector('.buy').addEventListener('click', lufhansa.buyPlane.bind(lufhansa));
+// document.querySelector('.buy').addEventListener('click', lufhansa.buyPlane.bind(lufhansa));
 
 
 // const addTax = (rate, value) => value + value * rate;
@@ -255,15 +255,15 @@ document.querySelector('.buy').addEventListener('click', lufhansa.buyPlane.bind(
 // console.log(addVAT(100))
 // console.log(addVAT(23));
 
-const addTax = function(rate){
-   return function(value){
-      return value + value * rate
-   }
-};
+// const addTax = function(rate){
+//    return function(value){
+//       return value + value * rate
+//    }
+// };
 
-const addVat = addTax(0.23);
-console.log(addVat(100))
-console.log(addVat(23));
+// const addVat = addTax(0.23);
+// console.log(addVat(100))
+// console.log(addVat(23));
 
 
 
@@ -304,46 +304,120 @@ console.log(addVat(23));
 // data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll
 // object! So what should the this keyword look like in this situation?
 
-const poll = {
-   question: "Waht is the best language in the world",
-   option: ["0:JavaScript","1: Python", "2: C++", "3: Rust"],
-   answer: new Array(4).fill(0),
-   // Register new asnwer Method
-   registerNewAnswer(){
-      const answer = Number(prompt(`${this.question}\n${this.option.join('\n')}\n(Write option number)`));
-      // Update the answer arry property
-      typeof answer === 'number' && answer < this.option.length && this.answer[answer]++;
-      // console.log(this.answer)
-      this.displayResult();
-      this.displayResult('string')
-   },
-   displayResult(type = 'none'){
-      if(type === 'none'){
-         console.log(this.answer)
-      }else if(type === 'string'){
-         console.log(`Poll results are ${this.answer.toString()}`)
-      }
-   }
-}
+// const poll = {
+//    question: "Waht is the best language in the world",
+//    option: ["0:JavaScript","1: Python", "2: C++", "3: Rust"],
+//    answer: new Array(4).fill(0),
+//    // Register new asnwer Method
+//    registerNewAnswer(){
+//       const answer = Number(prompt(`${this.question}\n${this.option.join('\n')}\n(Write option number)`));
+//       // Update the answer arry property
+//       typeof answer === 'number' && answer < this.option.length && this.answer[answer]++;
+//       // console.log(this.answer)
+//       this.displayResult();
+//       this.displayResult('string')
+//    },
+//    displayResult(type = 'none'){
+//       if(type === 'none'){
+//          console.log(this.answer)
+//       }else if(type === 'string'){
+//          console.log(`Poll results are ${this.answer.toString()}`)
+//       }
+//    }
+// }
 
-document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll));
+// document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer.bind(poll));
 
-poll.displayResult.call({answer: [5,2,3]});
+// poll.displayResult.call({answer: [5,2,3]});
 
 
 
 
 // Immediately invoked function Expression;
 
-const runONce = function(){
-   console.log("This will never run again");
-};
-runONce();
+// const runONce = function(){
+//    console.log("This will never run again");
+// };
+// runONce();
 
-(function(){
-   console.log('This will never work again')
+// (function(){
+//    console.log('This will never work again')
+// })();
+
+// (()=> console.log("This will also never work second time"))();
+
+
+
+
+
+
+// closurse function
+// What is closurse?
+// Answer: A closure is the combination of a function bundled  together (enclosed)
+            // with references to its surrounding state  (the lexical environment). 
+            //In other words, a closure gives a function access to its outer scope.
+
+const secureBooking = function(){
+   let passengerCount = 0;
+
+   return function(){
+      passengerCount++;
+      console.log(`${passengerCount} passengers`)
+   }
+};
+
+const booker = secureBooking();
+// booker();
+// booker();
+
+// Example 1;
+let f;
+const g= function(){
+   const a = 23;
+   f = function(){
+      console.log(a * 2)
+   }
+};
+// g(); f();
+
+const h = function(){
+   const b = 777;
+   f = function(){
+      console.log(b * 2);
+   }
+}
+// g()
+// f()
+
+// // Re-assigning f function
+// h()
+// f();
+
+// console.dir(f)
+
+// Example 2;
+
+const boardPassengers = function(n, wait){
+   const perGroup = n / 3;
+
+   setTimeout(()=>{
+      console.log(`We are now boarding ${n} passengers`);
+      console.log(`There are 3 groups, Each with ${perGroup} passengers`)
+   }, wait * 1000)
+
+   console.log(`Will start boarding in ${wait} seconds`)
+};
+boardPassengers(230, 5);
+
+// Coding challange ;
+
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function(){
+   header.style.color = 'blue'
+  })
 })();
 
-(()=> console.log("This will also never work second time"))();
-
- 
