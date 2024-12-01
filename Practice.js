@@ -1,4 +1,5 @@
 'use strict'
+/*
 // Funciotn deafault parameter Practice
 const bookings = [];
 const creatBooking = function(flightNum, numPassenger = 1, price = 400 * numPassenger){
@@ -267,3 +268,69 @@ document.querySelector('button').addEventListener('click', pollApp.registerNewAn
 (() => console.log('This will never run again'))();
 
 ((name) => console.log(`Hello ${name}`))("Alice")
+
+*/
+
+const mapTest = new Map([
+   ['USD', "United states of america"],
+   ['EUR', 'Europ states Euro'],
+   ['GBP', "Poun of United kingdom"]
+]);
+
+mapTest.forEach((value , key, arr) =>{
+   console.log(`${key} => ${value} `)
+});
+
+const setsTest = new Set(['USD', 'BDT', 'EURO', 'USD', 'EURO', 'RIAL', 'BDT']);
+
+setsTest.forEach((valu, key, arr) =>{
+   console.log(`${valu}`)
+});
+
+const arr = ['a', 'b', 'c', 'd', 'e'];
+console.log(arr.slice(1, -2))
+
+const juliaData = [3, 5, 2, 12, 7];
+const juliaDat1 = [9, 16, 6, 8, 3];
+const kateData = [4, 1, 15, 8, 3];
+const kateData1 = [10, 5, 6, 1, 4]
+
+const checkDogs = function(dogsJulia, dogsKate){
+   const juliaCorrect = dogsJulia.slice(1, -2);
+   const bothDogAges = juliaCorrect.concat(dogsKate);
+   // console.log(bothDogAges)
+   bothDogAges.forEach((age, i )=> {
+      console.log(age)
+      if(age >= 3){
+         console.log(`Dog Number ${i + 1} is an aduld  and is ${age}`)
+      }else(console.log(`Dog Number ${i + 1} is Still puppy`));
+   })
+};
+checkDogs(juliaData, kateData);
+
+const calcAverageHumanAge = function(ages){
+   const average = ages.map(age => age < 2 ? 2 * age : 16 + age * 4)
+                        .filter(age => age >= 18)
+                        .reduce((acc, curr, i , arr) => acc + curr / arr.length, 0);
+   return average;
+};
+console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
+
+const maparr = [3,1,4,3,2];
+
+const newMapArray = maparr.map(value =>{
+   return value * 2
+});
+console.log(newMapArray);
+
+const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
+
+const firstWithdrwals = movements.find(mov => mov < 0);
+console.log(firstWithdrwals);
+const firstDeposit = movements.find(mov => mov > 0);
+console.log(firstDeposit);
+
+setTimeout(()=>{
+   console.log("Hello")
+},1000)
+
