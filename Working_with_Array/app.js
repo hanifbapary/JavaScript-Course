@@ -169,7 +169,7 @@ console.log(sumbyReduce);
 
 
 /*
-const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
+// const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
 const euroToUsd = 1.1;
 
 // const movementUsd = movements.map(function(mov){
@@ -256,4 +256,73 @@ const accounts = [account1, account2, account3, account4];
 // console.log(account );
 
 const account = accounts.filter(acc => acc.owner === 'Jessica Davis');
-// console.log(account)
+// console.log(account);
+
+console.log("Hello");
+
+// some Methods
+console.log(movements);
+// console.log(movements.includes(-130));
+console.log(movements.some(mov => mov === -300));
+
+const anyDeposit = movements.some(mov => mov > 1500);
+console.log(anyDeposit);
+
+// Every;
+
+console.log(movements.every);
+
+
+// flat flatMap
+
+const arr = [[1,2,3], [4,5,6], 7, 8];
+console.log(arr.flat());
+const nestedToOne = arr.flat();
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat(2));
+
+// Calculate overalBalance of all account movments;
+const accountMovements = accounts.map(acc => acc.movements);
+
+const allMovments =accountMovements.flat();
+const summOfMovments = allMovments.reduce((acc, curr) => acc + curr ,0);
+console.log(summOfMovments);
+
+const overalBalance = accounts.map(acc => acc.movements)
+                      .flat()
+                      .reduce((acc, mov) => acc + mov , 0);
+
+console.log(overalBalance);
+
+// Flat Map;
+const overalBalance2 = accounts.flatMap(acc => acc.movements)
+                      .reduce((acc, mov) => acc + mov , 0);
+
+console.log(overalBalance);
+
+const owner = ['Jonas', 'Zach', 'Adam', "Martha"];
+console.log(owner.sort());
+// console.log(movements.sort());
+
+// return < 0 A, B;
+// return > 0 B, A
+console.log(movements)
+// movements.sort((curr , next) =>{
+//    console.log(curr, '=>', next)
+//    if(curr > next) return -1;
+//    if(next > curr) return 1;
+// });
+movements.sort((a, b) => b - a)
+
+console.log(movements)
+ 
+
+// More ways of creating adn filling array 
+
+console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+const x = new Array(7);
+x.fill(1  )
+console.log(x)
