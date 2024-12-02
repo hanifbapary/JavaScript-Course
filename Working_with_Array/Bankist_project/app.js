@@ -69,7 +69,7 @@ const displayMovements = function(movements){
           <div class="movements__value">${mov}€</div>
         </div>
       `;
-      containerMovements.insertAdjacentHTML('beforeend', html)
+      containerMovements.insertAdjacentHTML('afterbegin', html)
    })
 }
 // displayMovements(account1.movements);
@@ -110,9 +110,19 @@ const creatUserName = function(accounts){
 }
 creatUserName(accounts);
 
+// Update UI function
+const updateUI = function(curAcc){
+      // Display Balance
+      displaybalance(curAcc);
+      // Display movments
+      displayMovements(curAcc.movements)
+      // Dsplay summary
+      displayBalanceSummary(curAcc);
+}
 
 // Try to implement login function;
 let currentAccount;
+
 btnLogin.addEventListener('click', function(e){
    e.preventDefault()
    
@@ -128,13 +138,8 @@ btnLogin.addEventListener('click', function(e){
       inputLoginUsername.value = inputLoginPin.value = ''
       inputLoginPin.blur();
 
-      // Display Balance
-      displaybalance(currentAccount);
-      // Display movments
-      displayMovements(currentAccount.movements)
-      // Dsplay summary
-      displayBalanceSummary(currentAccount);
-      // 
+      // Update Ui function 
+      updateUI(currentAccount)
   }
 
 });
@@ -145,9 +150,37 @@ btnTransfer.addEventListener('click', function(e){
    const amount = Number(inputTransferAmount.value);
 
    const recevierAccount =accounts.find(acc =>  acc.username === inputTransferTo.value) ;
-    console.log(amount, recevierAccount)
 
-   if(amount > 0 && currentAccount.balance >= amount && recevierAccount?.username !== currentAccount.username){
-      console.log('transfer valid')
+   inputTransferAmount.value = inputTransferTo.value = '';
+
+   if(amount > 0 && recevierAccount && 
+      currentAccount.balance >= amount && 
+      recevierAccount?.username !== currentAccount.username){
+
+      // Doing the transfer
+      currentAccount.movements.push(-amount);
+      recevierAccount.movements.push(amount);
+
+      // updtae UI
+      updateUI(currentAccount)
    }
+});
+
+
+// close buttton function
+btnClose.addEventListener('click', function(e){
+   e.preventDefault();
+
+   if(inputCloseUsername.value === 
+      currentAccount.username &&  
+      Number(inputClosePin.value) === 
+      currentAccount.pin){
+      const index = accounts.findIndex(acc => acc.username === currentAccount.username)
+      console.log(index)
+
+      accounts.splice(index, 1);
+      containerApp.style.opacity = 0;
+      labelWelcome.textContent = 'Log in to get started'
+   };
+   inputCloseUsername.value = inputClosePin.value = '';
 })
