@@ -356,7 +356,7 @@ console.log(users)
 
 
 const arr = [1, 2 , [3, 5], 6, 7];
-const copy = [arr.flat()];
+const copy = [arr.flat];                     
 
 
 
