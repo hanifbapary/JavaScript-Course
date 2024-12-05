@@ -334,6 +334,7 @@ document.querySelector('button').addEventListener('click', pollApp.registerNewAn
 //    console.log("Hello")
 // },1000)
 
+/*
 const arr = [1, 2, [3, 4, 5, ], 6, 7, 8];
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 const newArr = arrDeep.flat(2)
@@ -388,3 +389,41 @@ console.log(fruits2.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocal
 
 const numbers = [1, 100, 10, 3, -200, 9, 70, 34, 200, 1000];
 console.log(numbers.sort((a, b) => b - a))
+
+*/;
+
+const dogs = [
+   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+   { weight: 8, curFood: 200, owners: ['Matilda'] },
+   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+   { weight: 32, curFood: 340, owners: ['Michael'] },
+];
+
+// 1. 
+dogs.forEach(dog => dog.recFood = Math.floor(dog.weight ** 0.75 * 28));
+
+console.log(dogs);
+
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+console.log(dogSarah);
+
+console.log(`Sarah Dog eating too ${dogSarah.curFood > dogSarah.recFood ? 'Much' : 'Little'}`);
+
+const ownersEatTooMuch = dogs.filter(dog => dog.curFood > dog.recFood).flatMap(dog => dog.owners);
+console.log(ownersEatTooMuch);
+
+const ownersEatTooLittle = dogs.filter(dog => dog.curFood < dog.recFood).flatMap(dog => dog.owners);
+console.log(ownersEatTooLittle)
+
+console.log(`${ownersEatTooMuch.join(' and ')} Dog Eat to Much`)
+console.log(`${ownersEatTooLittle.join(' and ')} Dog Eat to little`);
+
+console.log(dogs.some(dog => dog.curFood === dog.recFood));
+
+console.log(dogs.some(dog => dog.curFood > dog.recFood * 0.9 && dog.curFood <  dog.recFood * 1));
+
+const copyOfDog = dogs.slice().sort((a, b) => a.curFood - b.curFood);
+
+console.log(copyOfDog);
+
+
