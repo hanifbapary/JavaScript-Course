@@ -276,31 +276,17 @@ document.querySelector('button').addEventListener('click', pollApp.registerNewAn
 //    ['EUR', 'Europ states Euro'],
 //    ['GBP', "Poun of United kingdom"]
 // ]);
-// const mapTest = new Map([
-//    ['USD', "United states of america"],
-//    ['EUR', 'Europ states Euro'],
-//    ['GBP', "Poun of United kingdom"]
-// ]);
 
-// mapTest.forEach((value , key, arr) =>{
-//    console.log(`${key} => ${value} `)
-// });
 // mapTest.forEach((value , key, arr) =>{
 //    console.log(`${key} => ${value} `)
 // });
 
 // const setsTest = new Set(['USD', 'BDT', 'EURO', 'USD', 'EURO', 'RIAL', 'BDT']);
-// const setsTest = new Set(['USD', 'BDT', 'EURO', 'USD', 'EURO', 'RIAL', 'BDT']);
 
 // setsTest.forEach((valu, key, arr) =>{
 //    console.log(`${valu}`)
 // });
-// setsTest.forEach((valu, key, arr) =>{
-//    console.log(`${valu}`)
-// });
 
-// const arr = ['a', 'b', 'c', 'd', 'e'];
-// console.log(arr.slice(1, -2))
 // const arr = ['a', 'b', 'c', 'd', 'e'];
 // console.log(arr.slice(1, -2))
 
@@ -308,23 +294,7 @@ document.querySelector('button').addEventListener('click', pollApp.registerNewAn
 // const juliaDat1 = [9, 16, 6, 8, 3];
 // const kateData = [4, 1, 15, 8, 3];
 // const kateData1 = [10, 5, 6, 1, 4]
-// const juliaData = [3, 5, 2, 12, 7];
-// const juliaDat1 = [9, 16, 6, 8, 3];
-// const kateData = [4, 1, 15, 8, 3];
-// const kateData1 = [10, 5, 6, 1, 4]
 
-// const checkDogs = function(dogsJulia, dogsKate){
-//    const juliaCorrect = dogsJulia.slice(1, -2);
-//    const bothDogAges = juliaCorrect.concat(dogsKate);
-//    // console.log(bothDogAges)
-//    bothDogAges.forEach((age, i )=> {
-//       console.log(age)
-//       if(age >= 3){
-//          console.log(`Dog Number ${i + 1} is an aduld  and is ${age}`)
-//       }else(console.log(`Dog Number ${i + 1} is Still puppy`));
-//    })
-// };
-// checkDogs(juliaData, kateData);
 // const checkDogs = function(dogsJulia, dogsKate){
 //    const juliaCorrect = dogsJulia.slice(1, -2);
 //    const bothDogAges = juliaCorrect.concat(dogsKate);
@@ -345,33 +315,17 @@ document.querySelector('button').addEventListener('click', pollApp.registerNewAn
 //    return average;
 // };
 // console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
-// const calcAverageHumanAge = function(ages){
-//    const average = ages.map(age => age < 2 ? 2 * age : 16 + age * 4)
-//                         .filter(age => age >= 18)
-//                         .reduce((acc, curr, i , arr) => acc + curr / arr.length, 0);
-//    return average;
-// };
-// console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
+<<<<<<< HEAD
 
-// const maparr = [3,1,4,3,2];
 // const maparr = [3,1,4,3,2];
 
 // const newMapArray = maparr.map(value =>{
 //    return value * 2
 // });
 // console.log(newMapArray);
-// const newMapArray = maparr.map(value =>{
-//    return value * 2
-// });
-// console.log(newMapArray);
 
 // const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
-// const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
 
-// const firstWithdrwals = movements.find(mov => mov < 0);
-// console.log(firstWithdrwals);
-// const firstDeposit = movements.find(mov => mov > 0);
-// console.log(firstDeposit);
 // const firstWithdrwals = movements.find(mov => mov < 0);
 // console.log(firstWithdrwals);
 // const firstDeposit = movements.find(mov => mov > 0);
@@ -407,5 +361,115 @@ const copy = [arr.flat];
 
 
 
+
+// const maparr = [3,1,4,3,2];
+
+// const newMapArray = maparr.map(value =>{
+//    return value * 2
+// });
+// console.log(newMapArray);
+
+// const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
+
+// const firstWithdrwals = movements.find(mov => mov < 0);
+// console.log(firstWithdrwals);
+// const firstDeposit = movements.find(mov => mov > 0);
+// console.log(firstDeposit);
+
+// setTimeout(()=>{
+//    console.log("Hello")
+// },1000)
+
+/*
+const arr = [1, 2, [3, 4, 5, ], 6, 7, 8];
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+const newArr = arrDeep.flat(2)
+console.log(newArr);
+
+const account1 = {
+   owner: 'Jonas Schmedtmann',
+   movements: [12342131,200, 450, -400, 3000, -650, -130, 70, 1300],
+   interestRate: 1.2, // %
+   pin: 1111,
+};
+ 
+ const account2 = {
+   owner: 'Jessica Davis',
+   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+   interestRate: 1.5,
+   pin: 2222,
+};
+ 
+ const account3 = {
+   owner: 'Steven Thomas Williams',
+   movements: [200, -200, 340, -300, -20, 50, 400, -460],
+   interestRate: 0.7,
+   pin: 3333,
+};
+ 
+ const account4 = {
+   owner: 'Sarah Smith',
+   movements: [430, 1000, 700, 50, 90],
+   interestRate: 1,
+   pin: 4444,
+};
+
+const accounts = [account1, account2, account3, account4];
+
+// const allAccountMovements = accounts.map(acc => acc.movements);
+// console.log(allAccountMovements)
+const allMovments = accounts.flatMap(acc => acc.movements);
+console.log(allMovments);
+const summOfMovments = allMovments.reduce((acc, curr) => acc + curr , 0);
+console.log(summOfMovments);
+
+const sumOfAllAccountMovments = accounts.flatMap(acc => acc.movements)
+   .reduce((acc, curr) => acc + curr, 0);
+
+console.log(sumOfAllAccountMovments);
+
+const fruits = ['apple', 'orange', 'mango', 'lichi', 'malta', 'goava'];
+console.log(fruits.sort());
+const fruits2 = ['apple', 'Orange', 'mango', 'Lichi', 'Malta', 'goava'];
+console.log(fruits2.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase())));
+
+const numbers = [1, 100, 10, 3, -200, 9, 70, 34, 200, 1000];
+console.log(numbers.sort((a, b) => b - a))
+
+*/;
+
+const dogs = [
+   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+   { weight: 8, curFood: 200, owners: ['Matilda'] },
+   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+   { weight: 32, curFood: 340, owners: ['Michael'] },
+];
+
+// 1. 
+dogs.forEach(dog => dog.recFood = Math.floor(dog.weight ** 0.75 * 28));
+
+console.log(dogs);
+
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+console.log(dogSarah);
+
+console.log(`Sarah Dog eating too ${dogSarah.curFood > dogSarah.recFood ? 'Much' : 'Little'}`);
+
+const ownersEatTooMuch = dogs.filter(dog => dog.curFood > dog.recFood).flatMap(dog => dog.owners);
+console.log(ownersEatTooMuch);
+
+const ownersEatTooLittle = dogs.filter(dog => dog.curFood < dog.recFood).flatMap(dog => dog.owners);
+console.log(ownersEatTooLittle)
+
+console.log(`${ownersEatTooMuch.join(' and ')} Dog Eat to Much`)
+console.log(`${ownersEatTooLittle.join(' and ')} Dog Eat to little`);
+
+console.log(dogs.some(dog => dog.curFood === dog.recFood));
+
+console.log(dogs.some(dog => dog.curFood > dog.recFood * 0.9 && dog.curFood <  dog.recFood * 1));
+
+const copyOfDog = dogs.slice().sort((a, b) => a.curFood - b.curFood);
+
+console.log(copyOfDog);
 
 
