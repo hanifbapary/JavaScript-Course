@@ -427,3 +427,6 @@ const copyOfDog = dogs.slice().sort((a, b) => a.curFood - b.curFood);
 console.log(copyOfDog);
 
 
+console.log('Md hanif')
+
+
