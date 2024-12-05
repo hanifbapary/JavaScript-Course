@@ -315,8 +315,6 @@ document.querySelector('button').addEventListener('click', pollApp.registerNewAn
 //    return average;
 // };
 // console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
-<<<<<<< HEAD
-
 // const maparr = [3,1,4,3,2];
 
 // const newMapArray = maparr.map(value =>{
@@ -471,5 +469,8 @@ console.log(dogs.some(dog => dog.curFood > dog.recFood * 0.9 && dog.curFood <  d
 const copyOfDog = dogs.slice().sort((a, b) => a.curFood - b.curFood);
 
 console.log(copyOfDog);
+
+
+console.log("Sumaiya How are you")
 
 
